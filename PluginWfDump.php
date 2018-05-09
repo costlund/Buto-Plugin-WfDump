@@ -9,6 +9,7 @@
 class PluginWfDump{
   /**
    * Event to dump data.
+   * To run at end of a document one could use the sys_close event.
    */
   public function event_dump(){
     if(!wfHelp::isLocalhost() || !wfArray::get($GLOBALS, 'sys/settings/dump')){
